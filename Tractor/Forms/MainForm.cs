@@ -24,7 +24,6 @@ namespace Tractor.Forms
 
         private void LoadTractors()
         {
-            // Додаємо тестові трактори
             tractorList.Add(new TractorModel
             {
                 Model = "John Deere 6155M",
@@ -37,6 +36,16 @@ namespace Tractor.Forms
 
             tractorList.Add(new TractorModel
             {
+                Model = "John Deere 8370R",
+                Year = 2020,
+                EngineType = "9,0L дизель",
+                HorsePower = "408 к.с.",
+                PowerKW = "155 кВт",
+                Price = -272945
+            });
+
+            tractorList.Add(new TractorModel
+            {
                 Model = "John Deere 5075E",
                 Year = 2019,
                 EngineType = "3.0L дизель",
@@ -45,22 +54,128 @@ namespace Tractor.Forms
                 Price = 75000
             });
 
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 7810",
+                Year = 2002,
+                EngineType = "3.0L дизель",
+                HorsePower = "55 к.с.",
+                PowerKW = "55 кВт",
+                Price = 29000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8370R",
+                Year = 2018,
+                EngineType = "9.0L дизель",
+                HorsePower = "370 к.с.",
+                PowerKW = "130 кВт",
+                Price = 223407
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5090 GN",
+                Year = 2017,
+                EngineType = "3.4L дизель",
+                HorsePower = "90 к.с.",
+                PowerKW = "67 кВт",
+                Price = 50410
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 7310R",
+                Year = 2016,
+                EngineType = "7.0L дизель",
+                HorsePower = "345 к.с.",
+                PowerKW = "254,3 кВт",
+                Price = 179000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8270R",
+                Year = 2015,
+                EngineType = "8.5L дизель",
+                HorsePower = "270 к.с.",
+                PowerKW = "199 кВт",
+                Price = 168000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8335R",
+                Year = 2014,
+                EngineType = "9.0L дизель",
+                HorsePower = "330 к.с.",
+                PowerKW = "228 кВт",
+                Price = 165000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8310R",
+                Year = 2013,
+                EngineType = "9.0L дизель",
+                HorsePower = "335 к.с.",
+                PowerKW = "246 кВт",
+                Price = 176871
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8320",
+                Year = 2004,
+                EngineType = "9.0L дизель",
+                HorsePower = "320 к.с.",
+                PowerKW = "235 кВт",
+                Price = 99916
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8335R",
+                Year = 2011,
+                EngineType = "8.0L дизель",
+                HorsePower = "335 к.с.",
+                PowerKW = "246 кВт",
+                Price = 189295
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8335RT",
+                Year = 2013,
+                EngineType = "8.8L дизель",
+                HorsePower = "350 к.с.",
+                PowerKW = "224 кВт",
+                Price = 145000
+            });
             ShowAllTractors();
         }
 
         private void ShowAllTractors()
         {
-            dataGridView1.DataSource = tractorList
-                .Select(t => new
-                {
-                    Model = t.Model,
-                    Year = t.Year,
-                    Engine = t.EngineType,
-                    HorsePower = t.HorsePower,
-                    PowerKW = t.PowerKW,
-                    Price = $"{t.Price:C}"
-                })
-                .ToList();
+            var result = tractorList.Select(t => new
+            {
+                Model = t.Model,
+                Year = t.Year,
+                Engine = t.EngineType,
+                HorsePower = t.HorsePower,
+                PowerKW = t.PowerKW,
+                Price = $"{t.Price:C}"
+            }).ToList();
+
+            dataGridView1.DataSource = result;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.Columns[0].HeaderText = "Модель";
+            dataGridView1.Columns[1].HeaderText = "Рік";
+            dataGridView1.Columns[2].HeaderText = "Двигун";
+            dataGridView1.Columns[3].HeaderText = "Кінські сили";
+            dataGridView1.Columns[4].HeaderText = "Потужність (кВт)";
+            dataGridView1.Columns[5].HeaderText = "Ціна";
         }
 
         private void FindButton_Click(object sender, EventArgs e)
@@ -94,8 +209,7 @@ namespace Tractor.Forms
                 return;
             }
 
-            var result = filtered
-                .Select(t => new
+            var result = filtered.Select(t => new
                 {
                     Model = t.Model,
                     Year = t.Year,
@@ -107,8 +221,17 @@ namespace Tractor.Forms
                 .ToList();
 
             dataGridView1.DataSource = result;
-
-            if (result.Count == 0)
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            if (result.Count > 0)
+            {
+                dataGridView1.Columns[0].HeaderText = "Модель";
+                dataGridView1.Columns[1].HeaderText = "Рік";
+                dataGridView1.Columns[2].HeaderText = "Двигун";
+                dataGridView1.Columns[3].HeaderText = "Кінські сили";
+                dataGridView1.Columns[4].HeaderText = "Потужність (кВт)";
+                dataGridView1.Columns[5].HeaderText = "Ціна";
+            }
+            else
             {
                 MessageBox.Show("Трактор не знайдено. Перевірте модель або рік.");
             }
