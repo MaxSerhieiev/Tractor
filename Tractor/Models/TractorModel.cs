@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Tractor.Models
 {
-    class TractorModel
+   public class TractorModel
     {
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public string EngineType { get; set; }
+        public string HorsePower { get; set; }
+        public string PowerKW { get; set; }
+        public decimal Price { get; set; }
     }
 }
