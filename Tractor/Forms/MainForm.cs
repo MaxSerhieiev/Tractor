@@ -41,7 +41,7 @@ namespace Tractor.Forms
                 EngineType = "9,0L дизель",
                 HorsePower = "408 к.с.",
                 PowerKW = "155 кВт",
-                Price = -272945
+                Price = 272945
             });
 
             tractorList.Add(new TractorModel
