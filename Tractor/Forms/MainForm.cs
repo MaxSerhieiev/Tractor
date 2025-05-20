@@ -43,6 +43,15 @@ namespace Tractor.Forms
                 PowerKW = "155 кВт",
                 Price = 272945
             });
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6155M",
+                Year = 2018,
+                EngineType = "6.0L дизель",
+                HorsePower = "125 к.с.",
+                PowerKW = "99 кВт",
+                Price = 110000
+            });
 
             tractorList.Add(new TractorModel
             {
@@ -72,6 +81,26 @@ namespace Tractor.Forms
                 HorsePower = "370 к.с.",
                 PowerKW = "130 кВт",
                 Price = 223407
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 7810",
+                Year = 2005,
+                EngineType = "5.0L дизель",
+                HorsePower = "80 к.с.",
+                PowerKW = "75 кВт",
+                Price = 50000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 7810",
+                Year = 2008,
+                EngineType = "7.0L дизель",
+                HorsePower = "101 к.с.",
+                PowerKW = "98 кВт",
+                Price = 83999
             });
 
             tractorList.Add(new TractorModel
