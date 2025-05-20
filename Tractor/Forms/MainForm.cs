@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Tractor.Forms
 {
-    public partial class MainForm: Form
+    public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void modelBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
