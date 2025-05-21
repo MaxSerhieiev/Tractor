@@ -182,6 +182,146 @@ namespace Tractor.Forms
                 PowerKW = "224 кВт",
                 Price = 145000
             });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6155M",
+                Year = 2024,
+                EngineType = "6.8L дизель",
+                HorsePower = "155 к.с.",
+                PowerKW = "114 кВт",
+                Price = 3065000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 8370R",
+                Year = 2019,
+                EngineType = "9.0L дизель",
+                HorsePower = "370 к.с.",
+                PowerKW = "272 кВт",
+                Price = 339000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5060E",
+                Year = 2023,
+                EngineType = "2.9L дизель",
+                HorsePower = "60 к.с.",
+                PowerKW = "45 кВт",
+                Price = 45000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5090E",
+                Year = 2023,
+                EngineType = "4.5L дизель",
+                HorsePower = "90 к.с.",
+                PowerKW = "67 кВт",
+                Price = 65000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6R 155",
+                Year = 2023,
+                EngineType = "6.8L дизель",
+                HorsePower = "230 к.с.",
+                PowerKW = "171 кВт",
+                Price = 250000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6R230",
+                Year = 2023,
+                EngineType = "6.8L дизель",
+                HorsePower = "230 к.с.",
+                PowerKW = "171 кВт",
+                Price = 250000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5075M",
+                Year = 2023,
+                EngineType = "4.5L дизель",
+                HorsePower = "75 к.с.",
+                PowerKW = "56 кВт",
+                Price = 70000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5095M",
+                Year = 2023,
+                EngineType = "4.5L дизель",
+                HorsePower = "95 к.с.",
+                PowerKW = "71 кВт",
+                Price = 80000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6R250",
+                Year = 2023,
+                EngineType = "6.8L дизель",
+                HorsePower = "250 к.с.",
+                PowerKW = "186 кВт",
+                Price = 270000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6R215",
+                Year = 2023,
+                EngineType = "8.8L дизель",
+                HorsePower = "215 к.с.",
+                PowerKW = "160 кВт",
+                Price = 230000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5E 5050E",
+                Year = 2023,
+                EngineType = "2.9L дизель",
+                HorsePower = "50 к.с.",
+                PowerKW = "37 кВт",
+                Price = 40000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5E 5067E",
+                Year = 2023,
+                EngineType = "2.9L дизель",
+                HorsePower = "67 к.с.",
+                PowerKW = "50 кВт",
+                Price = 50000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 5M 5075M",
+                Year = 2013,
+                EngineType = "4.5L дизель",
+                HorsePower = "95 к.с.",
+                PowerKW = "71 кВт",
+                Price = 80000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6M 6155M",
+                Year = 2013,
+                EngineType = "6.8L дизель",
+                HorsePower = "155 к.с.",
+                PowerKW = "114 кВт",
+                Price = 150000
+            });
             ShowAllTractors();
         }
 
