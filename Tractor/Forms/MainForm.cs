@@ -306,7 +306,7 @@ namespace Tractor.Forms
             tractorList.Add(new TractorModel
             {
                 Model = "John Deere 5M 5075M",
-                Year = 2013,
+                Year = 2016,
                 EngineType = "4.5L дизель",
                 HorsePower = "95 к.с.",
                 PowerKW = "71 кВт",
@@ -316,12 +316,43 @@ namespace Tractor.Forms
             tractorList.Add(new TractorModel
             {
                 Model = "John Deere 6M 6155M",
-                Year = 2013,
+                Year = 2017,
                 EngineType = "6.8L дизель",
                 HorsePower = "155 к.с.",
                 PowerKW = "114 кВт",
                 Price = 150000
             });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6M 6175",
+                Year = 2017,
+                EngineType = "6.8L дизель",
+                HorsePower = "175 к.с.",
+                PowerKW = "130 кВт",
+                Price = 180000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6M 6195",
+                Year = 2019,
+                EngineType = "5.5L дизель",
+                HorsePower = "195 к.с.",
+                PowerKW = "145 кВт",
+                Price = 200000
+            });
+
+            tractorList.Add(new TractorModel
+            {
+                Model = "John Deere 6155M",
+                Year = 2018,
+                EngineType = "6.8L дизель",
+                HorsePower = "250 к.с.",
+                PowerKW = "186 кВт",
+                Price = 260000
+            });
+
             ShowAllTractors();
         }
 
