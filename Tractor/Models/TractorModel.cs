@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// Клас TractorModel описує одну модель трактора з основиними характеристиками:
+// навзою, роком випуску, об"ємом двигуна, потужністю, кінськими силами та ціною
 namespace Tractor.Models
 {
    public class TractorModel
