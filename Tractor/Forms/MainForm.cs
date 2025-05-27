@@ -410,14 +410,14 @@ namespace Tractor.Forms
             }
 
             var result = filtered.Select(t => new
-                {
-                    Model = t.Model,
-                    Year = t.Year,
-                    Engine = t.EngineType,
-                    HorsePower = t.HorsePower,
-                    PowerKW = t.PowerKW,
-                    Price = $"{t.Price:C}"
-                })
+            {
+                Model = t.Model,
+                Year = t.Year,
+                Engine = t.EngineType,
+                HorsePower = t.HorsePower,
+                PowerKW = t.PowerKW,
+                Price = $"{t.Price:C}"
+            })
                 .ToList();
 
             dataGridView1.DataSource = result;
@@ -440,5 +440,15 @@ namespace Tractor.Forms
         private void MainForm_Load(object sender, EventArgs e) { }
 
         private void textBox2_TextChanged(object sender, EventArgs e) { }
+
+        private void findButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modelBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
