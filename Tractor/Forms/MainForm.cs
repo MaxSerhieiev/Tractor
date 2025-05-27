@@ -20,7 +20,10 @@ namespace Tractor.Forms
             InitializeComponent();
             LoadTractors();
             findButton.Click += FindButton_Click;
+            addButton.Click += AddButton_Click;
+            deleteButton.Click += DeleteButton_Click;
         }
+
 
         private void LoadTractors()
         {
@@ -445,8 +448,72 @@ namespace Tractor.Forms
         {
 
         }
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string model = modelBox1.Text.Trim();
+                int year = int.Parse(yearBox1.Text.Trim());
+                string engine = engineBox.Text.Trim();
+                string hp = horsepowerBox.Text.Trim();
+                string kw = powerBox.Text.Trim();
+                decimal price = decimal.Parse(priceBox.Text.Trim());
 
+                tractorList.Add(new TractorModel
+                {
+                    Model = model,
+                    Year = year,
+                    EngineType = engine,
+                    HorsePower = hp,
+                    PowerKW = kw,
+                    Price = price
+                });
+
+                ShowAllTractors();
+                MessageBox.Show("Трактор успішно додано.");
+                modelBox1.Clear();
+                yearBox1.Clear();
+                engineBox.Clear();
+                horsepowerBox.Clear();
+                powerBox.Clear();
+                priceBox.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Помилка при додаванні. Перевірте введені дані.");
+            }
+        }
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null)
+            {
+                string selectedModel = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                int selectedYear = Convert.ToInt32(dataGridView1.CurrentRow.Cells[1].Value);
+
+                var toRemove = tractorList.FirstOrDefault(t => t.Model == selectedModel && t.Year == selectedYear);
+                if (toRemove != null)
+                {
+                    tractorList.Remove(toRemove);
+                    ShowAllTractors();
+                    MessageBox.Show("Трактор видалено.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Будь ласка, оберіть трактор для видалення.");
+            }
+        }
         private void modelBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
