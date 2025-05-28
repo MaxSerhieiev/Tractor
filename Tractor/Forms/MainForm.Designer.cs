@@ -83,15 +83,15 @@
             // 
             // modelBox1
             // 
-            modelBox1.Location = new Point(475, 35);
+            modelBox1.Location = new Point(294, 8);
             modelBox1.Name = "modelBox1";
-            modelBox1.Size = new Size(77, 23);
+            modelBox1.Size = new Size(122, 23);
             modelBox1.TabIndex = 18;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(426, 40);
+            label8.Location = new Point(234, 8);
             label8.Name = "label8";
             label8.Size = new Size(50, 15);
             label8.TabIndex = 17;
@@ -147,9 +147,9 @@
             // 
             // engineBox
             // 
-            engineBox.Location = new Point(294, 6);
+            engineBox.Location = new Point(475, 40);
             engineBox.Name = "engineBox";
-            engineBox.Size = new Size(122, 23);
+            engineBox.Size = new Size(77, 23);
             engineBox.TabIndex = 10;
             // 
             // label7
@@ -164,7 +164,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(437, 72);
+            label6.Location = new Point(430, 75);
             label6.Name = "label6";
             label6.Size = new Size(32, 15);
             label6.TabIndex = 8;
@@ -182,7 +182,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(232, 9);
+            label4.Location = new Point(422, 40);
             label4.Name = "label4";
             label4.Size = new Size(49, 15);
             label4.TabIndex = 6;
@@ -191,7 +191,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(437, 8);
+            label3.Location = new Point(434, 8);
             label3.Name = "label3";
             label3.Size = new Size(23, 15);
             label3.TabIndex = 5;
