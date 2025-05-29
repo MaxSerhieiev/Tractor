@@ -15,9 +15,12 @@ namespace Tractor.Forms
 {
     public partial class MainForm : Form
     {
+        // Список тракторів, який зберігає всі дані, що відображаються у табоиці
         private List<TractorModel> tractorList = new();
+        // Шлях до JSON-файлу для збереження та завантаження даних
         private readonly string dataFile = "tractors.json";
 
+        // Ініціалізує компоненти інтерфейсу та завантажує список тракторів
         public MainForm()
         {
             InitializeComponent();
@@ -27,7 +30,7 @@ namespace Tractor.Forms
             deleteButton.Click += DeleteButton_Click;
         }
 
-
+        // Завантажує список тракторів з файлу, або створює стандартні записи, якщо файл відсутній
         private void LoadTractors()
         {
             string fileName = "tractors.json";
@@ -69,12 +72,13 @@ namespace Tractor.Forms
        
     };
 }
+        // Зберігає поточний список тракторів у JSON-файл
         private void SaveTractors()
         {
             string json = JsonSerializer.Serialize(tractorList, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(dataFile, json);
         }
-
+        // Виводить повний список тракторів у таблицю DataGridView. Кожен рядок містить характеристики моделі
         private void ShowAllTractors()
         {
             var result = tractorList.Select(t => new
@@ -96,6 +100,7 @@ namespace Tractor.Forms
             dataGridView1.Columns[4].HeaderText = "Потужність (кВт)";
             dataGridView1.Columns[5].HeaderText = "Ціна";
         }
+        // Фільтрує список тракторів за моделлю та/або роком на основі введених користувачем значень
         private void FindButton_Click(object sender, EventArgs e)
         {
             string model = modelBox.Text.Trim();
@@ -126,7 +131,7 @@ namespace Tractor.Forms
                 MessageBox.Show("Невірно введений рік.");
                 return;
             }
-
+            // Вивід результатів у таблицю
             var result = filtered.Select(t => new
             {
                 Model = t.Model,
@@ -163,6 +168,7 @@ namespace Tractor.Forms
         {
 
         }
+        // Обробляє подію натискання кнопки "Додати". Створює новий об'єкт трактора з введених даних, додає його до списку і зберігає у файл
         private void AddButton_Click(object sender, EventArgs e)
         {
             try
@@ -201,7 +207,7 @@ namespace Tractor.Forms
                 MessageBox.Show("Помилка при додаванні. Перевірте введені дані.");
             }
         }
-
+        // Обробляє подію натискання кнопки "Видалити". Видаляє обраний запис трактора зі списку та зберігає оновлення у файл
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.CurrentRow != null)
